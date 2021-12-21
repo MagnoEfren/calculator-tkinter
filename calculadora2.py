@@ -23,14 +23,12 @@ class HoverButton(Button):
 
 	def on_leave(self, e):
 		self["background"] = self.defaultBackground
-
 i=0
 def obtener(dato):
 	global i
 	i+=1
 	Resultado.insert(i, dato)
-
-
+	
 def operacion():
 	global i
 	ecuacion = Resultado.get()
@@ -66,7 +64,6 @@ frame.grid(column=0, row=0, padx=6, pady=3)
 
 Resultado = Entry(frame,bg='#9EF8E8', width=18, relief='groove', font = 'Montserrat 16',justif = 'right')
 Resultado.grid(columnspan=4 , row=0, pady=3,padx=1, ipadx=1, ipady=1) 
-
 #fila 1
 Button1 = HoverButton(frame, text= "1", borderwidth=2, height=2, width=5, 
 	font= ('Comic sens MC',12,'bold'),relief = "raised", activebackground="aqua", bg ='#999AB8',  
@@ -84,7 +81,6 @@ Button_borrar = HoverButton(frame, text= "⌫", height=2, width=5,
 	font= ('Comic sens MC',12,'bold'), borderwidth=2,  relief = "raised", activebackground="red", 
 	bg='#FD0371',  anchor="center",command=lambda: borrar_uno())  
 Button_borrar.grid(column =3, row=1, pady=2,padx=2)
-
 #fila 2
 Button4 = HoverButton(frame, text= "4",height=2, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2,  relief = "raised", activebackground="aqua", bg ='#999AB8', anchor="center",
@@ -102,7 +98,6 @@ Button_mas = HoverButton(frame, text= "+", height=2, width=5,font= ('Comic sens 
 	borderwidth=2,  relief = "raised", activebackground="#FEEF02", bg='#2A16F7',  anchor="center",
 	command=lambda: obtener('+'))  
 Button_mas.grid(column =3, row=2, pady=2,padx=2)
-
 #fila 3
 Button7 = HoverButton(frame, text= "7",height=2, width=5, font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2,  relief = "raised", activebackground="aqua",bg ='#999AB8',  anchor="center",
@@ -120,7 +115,6 @@ Button_menos = HoverButton(frame, text= "-", height=2, width=5,font= ('Comic sen
 	borderwidth=2,  relief = "raised", activebackground="#FEEF02", bg='#2A16F7',  anchor="center",
 	command=lambda: obtener('-'))  
 Button_menos.grid(column =3, row=3, pady=2,padx=2)
-
 #fila 4
 Button0 = HoverButton(frame, text= "0",height=5, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2,  relief = "raised", activebackground="aqua",bg ='#999AB8',  anchor="center",
@@ -138,7 +132,6 @@ Button_por = HoverButton(frame, text= "x", height=2, width=5,font= ('Comic sens 
 	borderwidth=2,  relief = "raised", activebackground="#FEEF02", bg='#2A16F7',  anchor="center",
 	command=lambda: obtener('*'))  
 Button_por.grid(column =3, row=4, pady=2,padx=2)
-
 #fila 4
 Button_igual = HoverButton(frame, text= "=", height=2, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2,  relief = "raised", activebackground="#16FD03", bg='#2FEC71', anchor="center",
@@ -150,12 +143,10 @@ Button_raiz = HoverButton(frame, text= "√", height=2, width=5,font= ('Comic se
 	command=lambda: obtener('**(1/2)'))  
 Button_raiz.grid(column = 2 , row=5, pady=1,padx=1)
 
-
 Button_borrar = HoverButton(frame, text= "C", height=2, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2, relief = "raised", activebackground="red", bg='#FD5603', anchor="center",
 	command=lambda: borrar_todo())  
 Button_borrar.grid(column =3, row=5, pady=2,padx=2)
-
 ventana.mainloop()
 
 
