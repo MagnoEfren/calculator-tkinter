@@ -39,7 +39,6 @@ def operacion():
 			Resultado.insert(0,result)
 			longitud = len(result)
 			i = longitud
-
 		except:
 			result = 'ERROR'
 			Resultado.delete(0,END)
