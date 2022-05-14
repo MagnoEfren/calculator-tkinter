@@ -10,7 +10,7 @@ ventana.config(bg= "white")
 ventana.iconbitmap(bitmap='icono.ico')
 ventana.resizable(0,0)
 ventana.title('Calculadora')
-#hover
+
 class HoverButton(Button):
 	def __init__(self, master, **kw):
 		Button.__init__(self,master=master,**kw)
