@@ -1,7 +1,6 @@
 # Calculadora en Python con Tkinter con efecto hover
 # @autor: Magno Efren
 # Youtube: https://www.youtube.com/c/MagnoEfren
-
 from tkinter import Button, Tk, Frame,Entry,END
 
 ventana = Tk()
@@ -136,16 +135,15 @@ Button_igual = HoverButton(frame, text= "=", height=2, width=5,font= ('Comic sen
 	borderwidth=2,  relief = "raised", activebackground="#16FD03", bg='#2FEC71', anchor="center",
 	command=lambda: operacion())  
 Button_igual.grid(column =1 , row=5, pady=1,padx=1)
-
 Button_raiz = HoverButton(frame, text= "√", height=2, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2,  relief = "raised", activebackground="#FEEF02",bg ='#2A16F7', anchor="center",
 	command=lambda: obtener('**(1/2)'))  
 Button_raiz.grid(column = 2 , row=5, pady=1,padx=1)
-
 Button_borrar = HoverButton(frame, text= "C", height=2, width=5,font= ('Comic sens MC',12,'bold'), 
 	borderwidth=2, relief = "raised", activebackground="red", bg='#FD5603', anchor="center",
 	command=lambda: borrar_todo())  
 Button_borrar.grid(column =3, row=5, pady=2,padx=2)
+
 ventana.mainloop()
 
 
