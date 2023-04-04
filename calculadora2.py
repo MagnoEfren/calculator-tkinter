@@ -1,6 +1,7 @@
 # Calculadora en Python con Tkinter con efecto hover
-# @autor: Magno Efren
+# @autor: Magno Efren 
 # Youtube: https://www.youtube.com/c/MagnoEfren
+
 from tkinter import Button, Tk, Frame,Entry,END
 
 ventana = Tk()
