@@ -146,34 +146,3 @@ Button_borrar = HoverButton(frame, text= "C", height=2, width=5,font= ('Comic se
 Button_borrar.grid(column =3, row=5, pady=2,padx=2)
 
 ventana.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
